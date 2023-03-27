@@ -4,10 +4,15 @@ spring:
     url: jdbc:mysql://localhost:3306/car_shift_manager_db
     password: '1234'
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: 'true'
     hibernate:
       ddl-auto: update
+
+  security:
+    user:
+      name: Admin
+      password: admin
 server:
   port: '8087'
 
