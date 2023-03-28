@@ -14,7 +14,15 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
-@Configuration
-public class SecurityConfiguration {
 
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity security) throws Exception
+    {
+        security.httpBasic().disable();
+    }
 }

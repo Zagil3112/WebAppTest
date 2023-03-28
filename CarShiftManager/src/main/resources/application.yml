@@ -13,6 +13,8 @@ spring:
     user:
       name: Admin
       password: admin
+
+
 server:
   port: '8087'
 
