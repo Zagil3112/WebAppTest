@@ -29,7 +29,6 @@ public class UserController {
     public ResponseEntity<List<User>> getUsers(){
         return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
 
-
     }
 
     @PostMapping()

@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-
 public class Shift {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
