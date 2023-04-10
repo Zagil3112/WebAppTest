@@ -9,18 +9,18 @@ spring:
     hibernate:
       ddl-auto: update
 
-  security:
-    user:
-      name: Admin
-      password: admin
+  #security:
+    #user:
+      #name: Admin
+      #password: admin
 
 
 server:
   port: '8087'
 
-  ssl:
-      enabled: true
-      key-store-password: "123456"
-      key-store-type: JKS
-      key-store: classpath:cetad.keystore.jks
-      key-alias: localhost
+  #ssl:
+      #enabled: false
+      #key-store-password: "123456"
+      #key-store-type: JKS
+      #key-store: classpath:cetad.keystore.jks
+      #key-alias: localhost
