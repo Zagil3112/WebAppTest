@@ -18,9 +18,9 @@ spring:
 server:
   port: '8087'
 
-  #ssl:
-      #enabled: false
-      #key-store-password: "123456"
-      #key-store-type: JKS
-      #key-store: classpath:cetad.keystore.jks
-      #key-alias: localhost
+  ssl:
+      enabled: true
+      key-store-password: "123456"
+      key-store-type: JKS
+      key-store: classpath:Sherlock.keystore.jks
+      key-alias: localhost
