@@ -33,17 +33,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private CustomPasswordEncoder customPasswordEncoder;
 
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(customPasswordEncoder.getPasswordEncoder());
-        //auth.userDetailsService(userDetailsService);
-    }
-
+    /*
+        @Override
+        protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+            auth.userDetailsService(userDetailsService).passwordEncoder(customPasswordEncoder.getPasswordEncoder());
+            //auth.userDetailsService(userDetailsService);
+        }
+    */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests().antMatchers("/**/authenticate").permitAll()
-                .anyRequest().authenticated();
+        http.csrf().disable();
+
+
+        //http.csrf().disable().authorizeRequests().antMatchers("/**/authenticate").permitAll()
+        //.anyRequest().authenticated();
+
     }
 
     @Override
@@ -51,4 +55,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
+
 }
